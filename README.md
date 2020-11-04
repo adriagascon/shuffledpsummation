@@ -15,7 +15,7 @@ works well with counts, as it is discrete.
 
 As a real-word dataset we used the Adult dataset. This dataset contains n = 32561 curated records from the 1994 US Census database.
 This is a dataset commonly used evaluate classification algorithms. We focused on the task of differentially private
-estimation the mean of the "age" attribute normalized by the maximum age (with parameters $\epsilon = 1, \delta = 1/n^2$). The generated table shows the mean and standard deviation of the error obtained by each algorithm over 20 executions.
+estimation the mean of the "age" attribute normalized by the maximum age (with parameters epsilon = 1, delta = 1/n^2). The generated table shows the mean and standard deviation of the error obtained by each algorithm over 20 executions.
 As expected, IKOS incurs error close to the one of CentralLaplace, and LocalLaplace has significantly worse error than the rest.
 Our recursive protocols outperform the single-message protocol Balle et al. (CRYPTO2019) in this task, and
 numerically optimized variants outperform their analytical counterparts.
