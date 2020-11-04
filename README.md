@@ -19,3 +19,7 @@ estimation the mean of the "age" attribute normalized by the maximum age (with p
 As expected, IKOS incurs error close to the one of CentralLaplace, and LocalLaplace has significantly worse error than the rest.
 Our recursive protocols outperform the single-message protocol Balle et al. (CRYPTO2019) in this task, and
 numerically optimized variants outperform their analytical counterparts.
+
+## Instructions
+
+To install dependencies, e.g. in a virtualenv, run `pip install -r requeriments.txt` and then run the notebook as `jupyter notebook main.ipynb`.
