@@ -58,7 +58,7 @@ scikit-learn==0.23.2
 scipy==1.5.3
 seaborn==0.11.0
 Send2Trash==1.5.0
-shuffleddp @ git+https://github.com/adriagascon/amplification-by-shuffling.git@73060ca7ee220186743ed6550dbdfa5e9cf9d10b
+shuffleddp @ git+https://github.com/BorjaBalle/amplification-by-shuffling.git@1778a0dd16405cb10d780d5f1878ed0b1fb76f2e
 six==1.15.0
 sklearn==0.0
 tabulate==0.8.7
