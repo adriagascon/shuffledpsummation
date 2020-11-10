@@ -125,11 +125,12 @@ class SingleMessageRealSum(NonPrivateRealSum):
         return estimator.estimate(quantize(data,precision)) / precision
 
 class ManyMessageRealSum(NonPrivateRealSum):
-    def __init__(self, eps, d, n, generic_params = True, num_messages = 2):
+    def __init__(self, eps, d, n, generic_params = True, num_messages = 2, show_debug_prints = False):
         self.n_ = n
         self.epsilon_ = eps
         self.delta_ = d
         self.num_messages_ = num_messages
+        self.show_debug_prints = show_debug_prints
         assert(np.log(1./self.delta_) >= 2*self.epsilon_)
         if generic_params:
             self.epsilons_ = [
@@ -161,8 +162,9 @@ class ManyMessageRealSum(NonPrivateRealSum):
                 d=self.deltas_[i])
             for i in range(self.num_messages_)]
     def estimate(self, data):
-        print('\t -> Estimating with n = {}, epsilons = {}, precisions = {}'.format(
-            self.n_, self.epsilons_, self.precisions_))
+        if self.show_debug_prints:
+            print('\t -> Estimating with n = {}, epsilons = {}, precisions = {}'.format(
+                self.n_, self.epsilons_, self.precisions_))
         result = 0
         for i in range(self.num_messages_):
             if i == self.num_messages_ - 1:
